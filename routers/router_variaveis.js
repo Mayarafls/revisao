@@ -5,21 +5,30 @@ import { constante } from '../services/variaveis/const.js';
 import { variavelVar } from '../services/variaveis/var.js';
 import { variavelLet } from '../services/variaveis/let.js';
 
-router_variaveis.get('/const', (req, res) => { 
-    let idadeAtual = 17
-    let resultado = constante(idadeAtual)
-    res.send(resultado)
+// body
+router_variaveis.post('/const', (req, res) => { 
+    let idadeAtual = req.body.idadeAtual
+    let resposta = {
+        resultado: constante(idadeAtual)
+    }
+    res.json(resposta)
 })
 
+// queryString
 router_variaveis.get('/var', (req, res) => {
-    const b = 12
-    const h = 15
-    const resposta = variavelVar(b, h);
-    res.send(resposta);
+    const b = req.query.base
+    const h = req.query.altura
+    const resposta = {
+        resultado: variavelVar(b, h)
+    }
+    res.json(resposta);
 })
 
-router_variaveis.get('/let', (req, res) => {
-    var x = 7
-    const resposta = variavelLet(x);
-    res.send(resposta);
+// params
+router_variaveis.get('/let/:x', (req, res) => {
+    var x = req.params.x
+    const resposta = {
+        resultado: variavelLet(x)
+    } 
+    res.json(resposta);
 })

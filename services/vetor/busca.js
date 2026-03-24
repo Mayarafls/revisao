@@ -2,7 +2,6 @@
 
 export function buscaPorNome(nomezinho) {
     let nomeBuscado = nomezinho.filter(nome => nome === "Mayara")
-    console.log(nomeBuscado)
     return nomeBuscado
 }
 

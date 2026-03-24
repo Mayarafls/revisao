@@ -4,10 +4,12 @@ export const router_vetor = express.Router();
 import { buscaPorNome } from "../services/vetor/busca.js";
 import { somatoria } from "../services/vetor/somatoria.js";
 
-router_vetor.get("/buscarNome", (req, res) => {
-    let nomes =["Mayara", "Ana","Andre"] // nomes chumbados1
-    let nomeBuscado = buscaPorNome(nomes)
-    res.json(nomeBuscado)
+router_vetor.post("/buscarNome", (req, res) => {
+    let nomes = req.body.nomes;
+    let resposta = {
+        resultado : buscaPorNome(nomes)
+    }
+    res.json(resposta)
 })
 
 router_vetor.get("/somatoria", (req, res) => {

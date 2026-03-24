@@ -6,26 +6,35 @@ import { ifComposto } from "../services/condicao/composto.js";
 import { ifSimples } from "../services/condicao/simples.js";
 import { ternario } from "../services/condicao/ternario.js";
 
-router_condicoes.get("/ifBasico", (req, res) => {
-  let idade = 10;
-  let resultado = ifBasico(idade);
-  res.send("resultado no console");
+router_condicoes.post("/ifBasico", (req, res) => {
+  let idade = req.body.idade;
+  let resposta= {
+     resultado: ifBasico(idade)
+  }
+  res.json(resposta);
 });
 
-router_condicoes.get("/ifComposto", (req, res) => {
-  let nota = 10;
-  let resultado = ifComposto(nota);
-  res.send("resultado no console");
+router_condicoes.post("/ifComposto", (req, res) => {
+  let nota = req.body.nota;
+  let resposta = {  
+      resultado: ifComposto(nota)
+  }
+  res.json(resposta);
 });
 
-router_condicoes.get("/ifSimples", (req, res) => {
-  let letra = "x";
-  let resultado = ifSimples(letra);
-  res.send("resultado no console");
+router_condicoes.post("/ifSimples", (req, res) => {
+  let letra = req.body.letra;
+  let resposta = {
+    resultado: ifSimples(letra)
+  }
+  res.json(resposta);
 });
 
-router_condicoes.get("/ternario", (req, res) => {
-  let num = 4;
-  let resultado = ternario(num);
-  res.send("resultado no console");
+router_condicoes.post("/ternario", (req, res) => {
+  let num = req.body.num;
+  let resposta = {
+  resultado : ternario(num)
+  }
+  console.log(resposta)
+  res.json(resposta);
 });
