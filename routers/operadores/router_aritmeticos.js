@@ -9,51 +9,51 @@ import { potencia } from "../../services/operadores/aritmetico/potencia.js";
 import { subtracao } from "../../services/operadores/aritmetico/subtracao.js"
 import { expressao } from "../../services/operadores/aritmetico/expressao.js"
 
-router_aritmeticos.get('/soma', (req,res) => {
-    let n1 = 20
-    let n2 = 15
-    let resultado =  soma(n1, n2)//funcao + parametros
+router_aritmeticos.get('/soma/:n1/:n2', (req,res) => {
+    let {n1, n2} = req.params
+
+    let resultado =  soma(Number(n1), Number(n2))
     res.send(resultado)
 })
 
-router_aritmeticos.get('/mult', (req,res) => {
-    let n1 = 20
-    let n2 = 15
-    let resultado =  mult(n1, n2)
+router_aritmeticos.get('/mult/:n1/:n2', (req,res) => {
+    let {n1, n2} = req.params
+
+    let resultado =  mult(Number(n1), Number(n2))
     res.send(resultado)
 })
 
-router_aritmeticos.get('/divisao', (req,res) => {
-    let n1 = 10
-    let n2 = 2
-    let resultado = divisao(n1, n2)
+router_aritmeticos.get('/divisao/:n1/:n2', (req,res) => {
+    let {n1, n2} = req.params
+
+    let resultado =  divisao(Number(n1), Number(n2))
     res.send(resultado)
 })
 
-router_aritmeticos.get('/mod', (req,res) => {
-    let n1 = 10
-    let n2 = 2
-    let resultado = mod(n1, n2)
+router_aritmeticos.get('/mod/:n1/:n2', (req,res) => {
+    let {n1, n2} = req.params
+
+    let resultado =  mod(Number(n1), Number(n2))
     res.send(resultado)
 })
 
-router_aritmeticos.get('/potencia', (req,res) => {
-    let n1 = 10
-    let n2 = 2
-    let resultado = potencia(n1, n2)
+router_aritmeticos.get('/potencia/:n1/:n2', (req,res) => {
+    let {n1, n2} = req.params
+
+    let resultado =  potencia(Number(n1), Number(n2))
     res.send(resultado)
 })
 
-router_aritmeticos.get('/subtracao', (req,res) => {
-    let n1 = 10
-    let n2 = 2
-    let resultado = subtracao(n1, n2)
+router_aritmeticos.get('/subtracao/:n1/:n2', (req,res) => {
+    let {n1, n2} = req.params
+
+    let resultado =  subtracao(Number(n1), Number(n2))
     res.send(resultado)
 })
 
-router_aritmeticos.get('/expressao', (req,res) => {
-    let n1 = 10
-    let n2 = 2
-    let resultado = expressao(n1, n2)
+router_aritmeticos.get('/expressao/:n1/:n2', (req,res) => {
+    let {n1, n2} = req.params
+
+    let resultado =  expressao(Number(n1), Number(n2))
     res.send(resultado)
 })

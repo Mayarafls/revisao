@@ -2,5 +2,7 @@
 
 
 export function forEach(alunos) {
-    alunos.forEach(aluno => console.log(`Bem vindo ${aluno}`))
+    let dados = []
+    alunos.forEach(aluno => dados+= `Bem vindo ${aluno};`)
+    return dados
 }

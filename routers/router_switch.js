@@ -3,8 +3,8 @@ export const router_switch = express.Router();
 
 import { semana } from '../services/switch/switch.js';
 
-router_switch.get('/semana', (req, res) => {
-    const dia = 2; // Exemplo de número do dia da semana
-    const resultado = semana(dia);
+router_switch.get('/semana/:dia', (req, res) => {
+    let resp = req.params.dia
+    const resultado = semana(resp);
     res.send(resultado);
 });

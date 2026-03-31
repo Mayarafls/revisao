@@ -3,10 +3,15 @@ Crie um programa que exiba os números de 1 a 10 utilizando um laço de repetiç
 */
 
 export function whilE(contador) {
-    while(contador <= 10){
-        console.log(contador)
-        cont++
+    let dados = []
+    let i = 0
+    while(i <= 10){
+        dados+=contador+i+"; "
+        i++
+        
+        
     }
+    return dados
 }
 
 

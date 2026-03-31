@@ -12,8 +12,10 @@ router_vetor.post("/buscarNome", (req, res) => {
     res.json(resposta)
 })
 
-router_vetor.get("/somatoria", (req, res) => {
-    let caracteres = ["M","A","Y"," = ", "Y", "A", "Y", "A"] // nomes chumbados1
-    let nome = somatoria(caracteres)
-    res.json(nome)
+router_vetor.post("/somatoria", (req, res) => {
+    let caracteres = req.body.caracteres
+    let resposta = {
+        resultado : somatoria(caracteres)
+    }
+    res.json(resposta)
 })
