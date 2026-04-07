@@ -17,8 +17,8 @@ router_logicos.get('/ou/:n1', (req, res) => {
     res.send(`O resultado do operador lógico OU é: ${resposta}`);
 });
 
-router_logicos.get('/not/:a/:b', (req, res) => {
-    const {A, B} = req.params
-    const resposta = logicoNot(A, B);
+router_logicos.get('/not/:a', (req, res) => {
+    const {A} = req.params
+    const resposta = logicoNot(A);
     res.send(`O resultado do operador lógico NOT é: ${resposta}`);
 });

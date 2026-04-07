@@ -1,10 +1,11 @@
 export function logicoOu(n1) {
     let resposta;
-    if (n1 > 1 || n1 < 3)  {
-        console.log("Numero não é 2")
-        return resposta = false;
+    if (n1 < 2 || n1 > 2) {
+        console.log("Numero não é 2");
+        resposta = false;
     } else {
-        console.log("Numero é 2")
-        return resposta = true;
+        console.log("Numero é 2");
+        resposta = true;
     }
+    return resposta;
 }

@@ -1,7 +1,6 @@
-export function logicoNot(A, B) {
+export function logicoNot(A) {
     console.log(!A);
-    console.log(!B); 
-    let resposta = !(A && B);
+    let resposta = !A;
     return resposta;
 }
 
