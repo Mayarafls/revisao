@@ -14,4 +14,4 @@ export function whilE(contador) {
     return dados
 }
 
-
+console.log(whilE(1))

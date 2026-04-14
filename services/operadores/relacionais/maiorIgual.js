@@ -1,8 +1,8 @@
-let n1 = 22;
+export function maiorIgual(n1){
+    if (n1 >= 1) {
+        return "Numero maior ou igual a 1"
+    } else {
+        return "Numero menor que 1"
 
-if (n1 >= 1) {
-    console.log("Numero maior ou igual a 1")
-} else {
-    console.log("Numero menor que 1")
-
+    }
 }

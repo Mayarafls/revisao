@@ -6,3 +6,4 @@ export function forEach(alunos) {
     alunos.forEach(aluno => dados+= `Bem vindo ${aluno};`)
     return dados
 }
+

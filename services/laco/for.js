@@ -14,3 +14,5 @@ export function forLoop(number) {
 
     return soma
 }
+
+console.log(forLoop([1,21,3,23,15]))

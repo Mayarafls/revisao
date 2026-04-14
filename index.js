@@ -5,6 +5,7 @@ app.use(express.json())
 
 import {router_aritmeticos} from "./routers/operadores/router_aritmeticos.js";
 import {router_logicos} from "./routers/operadores/router_logicos.js";
+import { router_relacionais } from './routers/operadores/router_relacionais.js';    
 
 import {router_variaveis} from "./routers/router_variaveis.js";
 import {router_condicoes} from "./routers/router_condicoes.js";
@@ -15,6 +16,7 @@ import {router_lacos} from "./routers/router_lacos.js";
 
 app.use('/operadores/aritmeticos', router_aritmeticos)
 app.use('/operadores/logicos', router_logicos)
+app.use('/operadores/relacionais', router_relacionais)
 
 app.use('/condicoes', router_condicoes)
 app.use('/variaveis', router_variaveis)

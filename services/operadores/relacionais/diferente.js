@@ -1,8 +1,8 @@
-let n1 = 22;
+export function diferente(n1) {
+    if (n1 != 2) {
+        return "Numero é diferente de 2"
+    } else {
+        return "Numero é 2"
 
-if (n1 != 2) {
-    console.log("Numero é diferente de 2")
-} else {
-    console.log("Numero é 2")
-
+    }
 }

@@ -1,8 +1,8 @@
-let n1 = 24;
+export function menor(n1){
+    if (n1 < 23) {
+        return "Numero  menor que 23"
+    } else {
+        return "Numero maior que 24"
 
-if (n1 < 23) {
-    console.log("Numero  menor que 23")
-} else {
-    console.log("Numero maior que 24")
-
+    }
 }

@@ -6,5 +6,5 @@ export function variavelLet(x) {
     let resultado = x*25;
     let msg = `O total arrecadado com as ${x} camisetas será ${resultado}`;
     return msg;
-}
+} 
 
